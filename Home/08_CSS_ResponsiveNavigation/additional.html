@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar</title>
+  <style media="screen">
+  /* Menu Level 1 */
+    .MenuLevel1 > div {
+      background-color: gainsboro;
+      border: solid black 1px;
+      border-radius: 3px;
+      color: gray;
+      cursor: pointer;
+      float: left;
+      font-size: 18px;
+      margin: 0 2px;
+      padding: 5px;
+      position: relative;
+      width: 120px;
+      height: 20px;
+    }
+
+    .MenuLevel1 > div:hover {
+      background-color: gray;
+      color: gainsboro;
+      transition: all 1s ease;
+    }
+
+    /* Menu Level 2 */
+    .MenuLevel2 > div {
+      background-color: gainsboro;
+      border: solid black 1px;
+      border-radius: 3px;
+      color: gray;
+      cursor: pointer;
+      width: 120px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .MenuLevel1 > div:hover .MenuLevel2 > div {
+      height: 20px;
+      opacity: 1;
+      transition: height 1.5s, opacity 1.5s, background-color 1s ease-in;
+      position: relative;
+      top: 5px;
+      padding: 5px 0;
+    }
+
+    .MenuLevel2 > div:hover {
+      background-color: gray;
+      color: gainsboro;
+    }
+
+    @media all and (max-width: 832px) {
+      .MenuLevel1 > div {
+        float: none;
+        width: 180px;
+      }
+
+      .MenuLevel1 > div:hover .MenuLevel2 > div {
+        position: relative;
+        top: -26px;
+        left: 186px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="MenuLevel1">
+    <div>Понедельник</div>
+    <div>Вторник</div>
+    <div>
+      Среда
+      <div class="MenuLevel2">
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+      </div>
+    </div>
+    <div>Четверг</div>
+    <div>Пятница</div>
+    <div>Суббота</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>Bootstrap</title>
+  <style media="screen">
+    .alert-info {
+      font-family: monospace;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>HOW-TO: Программа на Python, Часть 1</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Навигация -->
+      <div class="col-4">
+        <ul>
+          <li><a href="#"><em>Программа на Python &mdash; часть 1</em></a></li>
+          <li><a href="base2.html"><em>Программа на Python &mdash; часть 2</em></a></li>
+          <li><a href="base3.html"><em>Программа на Python &mdash; часть 3</em></a></li>
+        </ul>
+        <h2 id="content">Содержание</h2>
+        <h3>HOW-TO: Программа на Python, Часть 1</h3>
+        <ul>
+          <li><a href="#program1">Наша первая программа</a></li>
+          <li><a href="#cycleFor">Пример цикла For</a></li>
+        </ul>
+      </div>
+
+      <!-- Контент -->
+      <div class="col-8">
+        <p>Из множества существующих языков программирования Python — один из самых лёгких в изучении.
+          Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в
+          состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка
+          для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей —
+          программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо
+          сейчас.</p>
+
+        <h2 id="program1">Наша первая программа</h2>
+        <a href="#content">К содержанию</a>
+        <p>Наберём код в текстовом редакторе (например, в <strong>gedit</strong>). Потом мы разберёмся, что делает каждая
+          строка и пойдём дальше.</p>
+        <p>Введите эти 4 строки:</p>
+        <div class="alert alert-info" role="alert">
+          #!/usr/bin/env python <br>
+          print 'Hello. I am a python program.' <br>
+          name = raw_input("What is your name?") <br>
+          print "Hello there, " + name + "!"
+        </div>
+
+        <p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке
+          <strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать программу на
+          Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале
+        </p>
+        <div class="alert alert-info" role="alert"><strong><u>chmod +x hello.py</u></strong></div>
+        <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+        <div class="alert alert-info" role="alert">
+          greg@earth:~/python_examples$ ./hello.py <br>
+          Hello. I am a python program. <br>
+          What is your name? Ferd Burphel <br>
+          Hello there, Ferd Burphel! <br>
+          greg@earth:~/python_examples$
+        </div>
+        <p>Вот и всё.</p>
+
+        <h2 id="cycleFor">Пример цикла For</h2>
+        <a href="#content">К содержанию</a>
+        <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и
+          наберите следующую программу:</p>
+        <div class="alert alert-info" role="alert">
+          #!/usr/bin/env python <br>
+          for cntr in range(0,10): <br>
+          &nbsp; &nbsp; print cntr
+        </div>
+        <p><em>Не забудьте поставить символ табуляции перед строкой «print cntr».</em> Это важно. В Python для
+          указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки как в других языках
+          программирования, а отступы.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+
+</html>
